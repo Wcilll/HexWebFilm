@@ -1,8 +1,8 @@
-// ✅ API Key dari TMDB
+// API Key dari TMDB
 const API_KEY =
   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZDdjOTU5MzNmNTA0Yzk5YzQ3MDY3OWMzMTFhYWNmOSIsIm5iZiI6MTc1MzI0NzY3Ny4zMjMsInN1YiI6IjY4ODA2ZmJkYTg1NGU0MmViM2Y3NzViMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.45RwLCC11Fd3UDKc8BhHGTl1IMoNC_JOCIuLH_ud9EI";
 
-// ✅ Ambil data film dari endpoint discover
+// Ambil data film dari endpoint discover
 fetch("https://api.themoviedb.org/3/discover/movie", {
   headers: {
     Authorization: "Bearer " + API_KEY,
@@ -12,7 +12,7 @@ fetch("https://api.themoviedb.org/3/discover/movie", {
   .then((data) => {
     const movieList = document.getElementById("movie-list");
 
-    // ✅ Render hasil data movie ke dalam elemen HTML
+    // Render hasil data movie ke dalam elemen HTML
     movieList.innerHTML = data.results
       .map((movie) => {
         return `
