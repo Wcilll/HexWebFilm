@@ -15,7 +15,7 @@ fetch("https://api.themoviedb.org/3/discover/movie", {
     // Render hasil data movie ke dalam elemen HTML
     movieList.innerHTML = data.results
       .map((movie) => {
-        return `
+        return `    
         <div class="image-film">
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${
           movie.title
